@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ES6 Assignment No.1</title>
+</head>
+<body>
+        <div height="100px" width="100px" border = "thick solid #0000FF">
+            <h1> Celsius to Fahrenheit Converter</h1>
+            <form onsubmit="convertTemp(event)">
+                Celsius : <input type="number" id="cel" step="0.1"> <button>Convert</button>
+                Fahrenheit: <input type="number" id="far" step="0.1">
+            </form>
+        </div>
+        <div height="100px" width="100px" border = "thick solid #0000FF">
+            <h1> Marla to Square Feet Converter</h1>
+            <form onsubmit="convertMarla(event)">
+                Marla : <input type="number" id="marla" step="0.1"> <button>Convert</button>
+                Square Feet: <input type="number" id="sqr" step="0.1">
+            </form>
+        </div>
+        <div height="100px" width="100px" border = "thick solid #0000FF">
+            <h1> Square Yards to Square Feet Converter</h1>
+            <form onsubmit="convertYard(event)">
+                Square Yards : <input type="number" id="yard" step="0.1"> <button>Convert</button>
+                Square Feet: <input type="number" id="sqrf" step="0.1">
+            </form>
+        </div>
+
+        <script>
+                function convertTemp(event){
+                    event.preventDefault();
+                        let celsius = document.querySelector("#cel").value;
+                        let fahrenheit = celsius * (9/5) + 32;
+
+                        document.querySelector("#far").value = fahrenheit.toFixed(1);
+                }
+                function convertMarla(event){
+                    event.preventDefault();
+                        let marla = document.querySelector("#marla").value;
+                        let square = marla * 225;
+
+                        document.querySelector("#sqr").value = square;
+                }
+                function convertYard(event){
+                    event.preventDefault();
+                        let yards = document.querySelector("#yard").value;
+                        let squarefeet = yards * 9;
+
+                        document.querySelector("#sqrf").value = squarefeet;
+                }
+        </script>
+</body>
+</html>
